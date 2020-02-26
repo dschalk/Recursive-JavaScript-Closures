@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add svelte-select-dev
+
+PATH: 
+  /home/b/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/.local/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  8.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/svelte-select-dev: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66947:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:140665:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141637:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141559:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "svelte-app",
+    "version": "1.0.0",
+    "devDependencies": {
+      "npm-run-all": "^4.1.5",
+      "rollup": "^1.20.3",
+      "rollup-plugin-commonjs": "^9.3.4",
+      "rollup-plugin-livereload": "^1.0.1",
+      "rollup-plugin-node-resolve": "^4.2.3",
+      "rollup-plugin-svelte": "^5.1.0",
+      "rollup-plugin-terser": "^4.0.4",
+      "sirv-cli": "^0.4.4",
+      "svelte": "^3.9.1"
+    },
+    "scripts": {
+      "build": "rollup -c",
+      "autobuild": "rollup -c -w",
+      "dev": "run-p start:dev autobuild",
+      "start": "sirv public",
+      "start:dev": "sirv public --dev"
+    },
+    "dependencies": {
+      "from": "^0.1.7",
+      "svero": "^1.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

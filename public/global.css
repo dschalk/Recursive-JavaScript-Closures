@@ -1,0 +1,268 @@
+  html {
+    background-color: #211500;
+    width: 100%;
+  }
+
+  body {
+    width: 84%;
+    font: times;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 35px;
+    background-color: #361B01;
+    color: #d3ead5;
+    margin-top: 20px;
+    font-size: 18px;
+    box-shadow: inset 0px 0px 20px 0px rgb(0,0,0);
+    padding: 3px 0px 3px 3px;
+  }
+
+#content {
+  width: 50%;
+  font-family: monospace;
+  font-size: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-indent: 1.6%;
+}
+
+.abs {
+  position: absolute;
+  top: 500px;
+  left: 500px;
+  width: 45%;
+}
+
+.center {
+  text-align: center;
+  transform: translate(-50%,-50%);
+  font-family: serif;
+}
+
+.blue_green {
+  color: #aaeeff;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container > .flex-item {
+  flex: auto;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+.row_A {
+  float: left;
+  width: 10%;
+  padding: 10px;
+}
+
+.row_B {
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: #cc72f9;
+}
+
+.a2 {
+  color: #BCBBFF;
+}
+
+a:hover {
+  color: #f7f700;
+}
+
+#wrapper {
+  width: 500px;
+  height: 500px;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  float:right;
+  background-color: cyan;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+}
+
+pre {
+  margin-left: 26px;
+  color: #aaddff;
+}
+
+  p {
+    text-indent: 3%;
+  }
+
+  #logo {
+    background-color: transparent;
+    padding-left: 2%;
+  }
+
+  button {
+    margin-left: 5%;
+    background-color: #331903;
+    border-width: 2px;
+    border-color: #E8F7C1;
+    border-radius: 10px;
+    color: #00ffdd;
+    font-size: 24px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(255, 215, 0);
+    box-shadow:         0px 0px 15px 0px rgb(255, 215, 0);
+    padding: 3px 10px 3px 10px;
+  }
+
+  button:hover {
+    margin-left: 5%;
+    border-width: 2px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(255, 215, 0);
+    box-shadow:         0px 0px 15px 0px rgb(255, 215, 0);
+    padding: 3px 10px 3px 10px;
+    color: #000000;
+    background-color: lightblue;
+    border-color: #0000AA;
+    border-radius: 10px;
+  }
+
+  button:focus {
+    margin-left: 5%;
+    border-width: 0px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(255, 215, 0);
+    box-shadow:         0px 0px 15px 0px rgb(255, 215, 0);
+    padding: 3px 10px 3px 10px;
+    color: #000000;
+    background-color: lightblue;
+    border-color: #d3ead5;
+    border-radius: 10px;
+  }
+
+  #buttonB {
+    font-size: 18px;
+    margin-right: 2%;
+  }
+
+  #roll {
+    margin-left: 8%;
+  }
+
+.icon {
+    line-height: 1;
+
+label: {
+    background-color: #331903;
+    text-align: left;
+    border-color: #331903;
+    outline: 0px;
+    color: #CCFDCB;
+    border-radius: 10px;
+    padding-top: 1.1px;
+    padding-bottom: 2px;
+    margin-right: 3px;
+    margin-left: 12px;
+    font-size: 24px;
+    display: inline;
+  }
+
+  h2 {
+    color: #efe302;
+    text-align: center;
+  }
+
+  h1 {
+    color: #D6FFFE;
+    text-align: center;
+  }
+
+#content2{ width: 90%;
+  font-size: 22px;
+  font-family: monospace;
+  margin-left: 3%;
+  display: block;
+  text-indent 1.6%;
+}
+
+.content2{
+  width: 90%;
+  font-size: 22px;
+  font-family: monospace;
+  margin-left: 3%;
+  display: block;
+  text-indent 1.6%;
+}
+
+.content {
+  width: 50%;
+  font-family: monospace;
+  font-size: 22px;
+  margin-left: 3%;
+  margin-right: auto;
+  display: block;
+  text-indent 1.6%;
+}
+
+.large {
+  font-size: 144px;
+  color: DE3ead5;
+  textAlign: center;
+  color: red
+
+}
+
+.tao {
+  margin-left: 3%;
+}
+
+.tao_red {
+  margin-left: 3%;
+  color: red;
+}
+
+.tao15 {
+  margin-left: 11%;
+}
+
+#clear {
+  font-size: 18px;
+  color: #C6EDB9;
+  margin-bottom: 20px;
+  margin-left: 25%;
+}
+
+#clear:hover {
+  color: #0000BB;
+}
+
+.italic {
+  font-style: italic;
+  font-size: 18px;
+  color: #d9b3ef;
+}
+
+h3 {
+ color: #f9dc90;
+ font-size: 20px;
+ margin-left: 2%;
+}

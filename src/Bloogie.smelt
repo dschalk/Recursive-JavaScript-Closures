@@ -1,0 +1,177 @@
+
+<script>
+
+import { writable } from 'svelte/store';
+
+const count = writable(0, () => {
+	console.log('Subscriber says"What should I do?"');
+	return () => console.log('no more subscribers');
+});
+
+count.set("Susan is looking for you."); // does nothing
+
+const unsubscribe = count.subscribe(value => {
+	console.log(value);
+}); // logs 'got a subscriber', then '1'
+setTimeout(() => unsubscribe(),10000); // logs 'no more subscribers'
+
+/*
+const unsubscribe = store.subscribe(value => {
+	console.log(value);
+}); // logs `value`
+
+
+unsubscribe(); */
+
+    import Cow from './Cow.svelte'
+    import Monad from './Monad.svelte'
+    import Monad2 from './Monad2.svelte'
+    import Monad3 from './Monad3.svelte'
+    import Haskell from './Haskell.svelte'
+    import Bugs from './Bugs.svelte'
+    import Matrix from './Matrix.svelte'
+    import Transducer from './Transducer.svelte'
+    import ToggleClass from './ToggleClass.svelte'
+    import ToggleTheme from './ToggleTheme.svelte'
+    import Home from './Home.svelte'
+    import Score from './Score.svelte'
+    import Stor from './Stor.svelte'
+    import Snack from './Snack.svelte'
+    import StoreDemo from './StoreDemo.svelte'
+    
+    
+
+    let j = 0;
+    $: j = j;
+
+    function monad () {j = 1; console.log(j)};
+    function monad2 () {j = 2; console.log(j)};
+    function monad3 () {j = 3; console.log(j)};
+    function bugs () {j = 4; console.log(j)};
+    function matrix () {j = 5; console.log(j)};
+    function transduce () {j = 6; console.log(j)};
+    function async () {j = 7; console.log(j)};
+    function tog () {j = 8; console.log(j)};
+    function haskell () {j = 9; console.log(j)};
+    function score () {j = 10; console.log(j)};
+    function home () {j = 0; console.log(j)};
+    function stor () {j = 21; console.log(j)};
+    function snack () {j = 22; console.log(j)};
+
+</script>
+
+<style>
+div {
+   font-size: 18px;
+   color: #bccbaa;
+}
+
+.gamma {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+  ul {  
+  list-style: none;
+  list-style-type: none;
+  margin-left: 3%;
+  padding: 60px;
+}
+
+li {
+  float: left;
+}
+
+.margins {
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+</style>
+
+<div class="content">
+
+                        <br><br><br><br><br><br><br>
+                        <div style=" font-weight: 900; font-size: 45px; color: #bbbb00; text-align: center; ">DAVID SCHALK'S BLOG</div>
+                        <br><br>
+                        <ul style = "width:96%; list-style: none; font-size: 12px; color: #bbffff">
+                          <li><div>MONAD SERIES</div></li>
+                          <li class='button' on:click={monad}  >A Simple Monad</li>
+                          <li class='button' on:click={monad2}>Asynchronous Monad</li>
+                          <li class='button' on:click={monad3}>Promises Monad</li>
+                          <li class='button' on:click={() => {j = 7; console.log("j is", j)}}>Transducer Simulator</li>
+                          <li class='button' on:click={()=>{j=10; console.log("j is", j)}}>Game of Score</li>
+                        </ul>
+                        
+                        <ul>
+
+                        <li><div>MISCELLANEOUS TOPICS</div></li>
+                        <li class='button'  on:click={() => j = 5}> Why Svelte</li>
+                        <li class='button' on:click={() => {j = 9; console.log("j is", j)}}>Hidden Haskell Informationx</li>
+                        <li class='button' on:click={() => {j = 4; console.log("j is", j)}}>Bed Bugs</li>
+                        <li class='button' on:click={() => {j = 0; console.log("j is", j)}}>Home</li>
+                        <li class='button' on:click={() => {j = 23; console.log("j is", j)}}>StoreDemo</li>
+                        </ul>
+                        <ul>
+                        <li><div>SVELTE SNIPPETS</div></li>
+                        <li class='button' on:click={() => {j = 8; console.log("j is", j)}}>Toggle Theme</li>
+                        <li class='button' on:click={() => {j = 11; console.log("j is", j)}}>Toggle Class</li>
+                        <li class='button' on:click={stor}>Stor</li>
+                        <li class='button' on:click={snack}>Snack</li>
+                        <br>
+                        </ul>
+                        </div>
+                        <div class = margins>
+
+{#if j === 0}
+		<Home />
+{/if}
+{#if j === 1}
+<Monad />
+{/if}
+{#if j === 2}
+<Monad2 />
+{/if}
+{#if j === 3}
+<Monad3 />
+{/if}
+{#if j === 4}
+<Bugs />
+{/if}
+{#if j === 5}
+<Matrix />
+{/if}
+{#if j === 7}
+<Transducer />
+{/if}
+{#if j === 8}
+<ToggleTheme />
+{/if}
+{#if j === 9}
+<Haskell />
+{/if}
+{#if j === 10}
+<Score />
+{/if}
+{#if j === 11}
+<ToggleClass />
+{/if}
+{#if j === 20}
+<Cow />
+{/if}
+{#if j === 21}
+<Stor />
+{/if}
+{#if j === 22}
+<Snack />
+{/if}
+{#if j === 23}
+<StoreDemo />
+{/if}
+</div>
+<br><br>
+<slot />
+
+
